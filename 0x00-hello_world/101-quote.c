@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
-/*
+/**
  * main - Enrty point
  *
  * Description: 'c advanced program for me'
