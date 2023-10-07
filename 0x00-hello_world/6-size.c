@@ -1,12 +1,11 @@
 #include <stdio.h>
-/*
+/**
  * main - Entry point
  *
- * Description: 'C program that print the sizes of data types'
+ * Description: A C program that prints the size using sizeof
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
 	char c;
