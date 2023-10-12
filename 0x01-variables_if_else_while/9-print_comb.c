@@ -12,10 +12,7 @@
 
 int main(void)
 {
-	int a, b, n;
-
-	a = '0' + (n % 10);
-	b = '0' + (n % 10);
+	int n;
 
 	for (n = 0; n < 10; n++)
 	{
