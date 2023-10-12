@@ -10,7 +10,7 @@
  * Return: Always 0 (Success)
  */
 int main(void)
-{{
+{
 	int n, i;
 
 	srand(time(0));
