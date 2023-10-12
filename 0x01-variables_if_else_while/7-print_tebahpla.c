@@ -3,17 +3,19 @@
 /**
  * main - Entry point
  *
- * Description: 'C program that prints 0 - 9 numbers using putchar'
+ * Description: 'C program that prints alphabets reversly'
  *
  * Return: Always 0 (Success)
-*/
+ */
+
 int main(void)
 {
-	int a;
+	char c;
 
-	for (a = 0; a < 10; a++)
-		putchar('0' + a);
-
+	for (c = 'z'; c >= 'a'; --c)
+	{
+		putchar(c);
+	}
 	putchar('\n');
 
 	return (0);
