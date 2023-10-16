@@ -16,6 +16,6 @@ int _abs(int)
 	if (n >= 0)
 		return (n);
 
-	if else(n < 0)
+	else if (n < 0)
 		return (y);
 }
