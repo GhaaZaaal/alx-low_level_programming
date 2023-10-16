@@ -3,19 +3,16 @@
 /**
  * _abs - C external function that computes the absolute value of an int
  *
- * @int: 'an int number to compute the absolute value'
+ * @n: 'an int number to compute the absolute value'
  *
- * Return: Always 0 (Success)
+ * Return: the absolute value of the integer 
 */
 
-int _abs(int)
+int _abs(int n)
 {
-	int n, y;
 
-	y = -n;
-	if (n >= 0)
-		return (n);
+	if (n < 0)
+		n = -n;
 
-	else if (n < 0)
-		return (y);
+	return (n);
 }
