@@ -2,7 +2,7 @@
 
 /**
  * print_alphabet - 'c external function to print the alphabets in lowercase'
- * 
+ *
  * Return: 0 (Success)
 */
 
