@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
- * _isalpha - Entry point
+ * _isalpha - C external function that checks the character if alphabet
  *
- * Description: 'C external function that defines the case of the letter'
+ * @c:  'C external function's parameter that defines the case of the letter'
  *
  * Return: Always 0 (Success)
 */

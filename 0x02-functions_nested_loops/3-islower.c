@@ -1,10 +1,9 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * _islower - C external function to detect the lower case letter
  *
- * Description: 'C program that check the case of the letter
- *		using external function'
+ * @c: 'C external function that checks the case of the letter if lower or not'
  *
  * Return: Always 0 (Success)
 */
