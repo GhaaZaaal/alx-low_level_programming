@@ -3,14 +3,13 @@
 /**
  * print_last_digit - Entry point
  *
- * @int: 'C program that prints a last digit of a number'
+ * @n: 'C function that prints a last digit of a number'
  *
- * Return: Always 0 (Success)
+ * Return: i the last digit number
  */
 
-int print_last_digit(int)
+int print_last_digit(int n)
 {
-	int n;
 	int i = n % 10;
 
 	if (i < 0)
