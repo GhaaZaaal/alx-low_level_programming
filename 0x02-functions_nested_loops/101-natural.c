@@ -21,7 +21,9 @@ int main(void)
 		{
 			a = a + i;
 		}
-	printf("%d\n", a);
 	}
+
+	printf("%d\n", a);
+
 	return (0);
 }
