@@ -5,7 +5,7 @@
  *
  * @c: the character used to check in this func
  *
- * Return: 1 , 0 (upper , not upper)
+ * Return: 1 , 0 (upper , otherwise)
  */
 int _isupper(int c)
 {

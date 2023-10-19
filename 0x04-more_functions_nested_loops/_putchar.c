@@ -4,10 +4,9 @@
 /**
  * _putchar - prints 'char c'
  *
- * Description: 'C external function that prints c using putchar'
+ * @c: the char using in putchar
  *
- * Return: 1 (Success).
- *		-1 on error
+ * Return: 1 (Success) , -1 on error.
 */
 
 int _putchar(char c)
