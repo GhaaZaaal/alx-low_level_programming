@@ -9,7 +9,7 @@
 */
 int main(void)
 {
-	long y, x = 612852475143;
+	long x = 612852475143, y;
 
 	while (y < (x / 2))
 	{
