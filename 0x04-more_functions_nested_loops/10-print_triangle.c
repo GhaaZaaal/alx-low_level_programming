@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * print_tirangle - C function to draw a triangle in the terminal
+ * print_triangle - C function to draw a triangle in the terminal
  *
  * @size: the number of times that will print the hash
  *
