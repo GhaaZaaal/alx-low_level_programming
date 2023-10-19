@@ -18,7 +18,7 @@ int main(void)
 			x = x / 2;
 			continue;
 		}
-		
+
 		for (y = 3; y < (x / 2); y = y + 2)
 		{
 			if ((x % y) == 0)
@@ -26,7 +26,7 @@ int main(void)
 		}
 	}
 
-	printf("%ld \n", x);
+	printf("%ld\n", x);
 
 	return (0);
 }
