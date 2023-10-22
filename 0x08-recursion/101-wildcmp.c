@@ -53,7 +53,7 @@ int wildcmp(char *s1, char *s2)
 char *last_star(char *s2)
 {
 	if (*s2 == '*')
-		return (*last_star(s2 + 1));
+		return (last_star(s2 + 1));
 	else
 		return (s2);
 }
@@ -73,7 +73,7 @@ int inception(char *s1, char *s2)
 	if (*s1 == 0)
 		return (0);
 	if (*s1 == *s2)
-		i = i + wildcamp(s1 + 1, s2 + 1);
+		i = i + wildcmp(s1 + 1, s2 + 1);
 	i = i + inception(s1 + 1, s2);
 	return (i);
 }
