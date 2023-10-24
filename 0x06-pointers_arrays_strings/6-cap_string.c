@@ -8,7 +8,7 @@
  * Return: 1 if lower 0 if not
 */
 
-int islower(char c)
+int islower(int c)
 {
 	return (c >= 'a' && c <= 'z');
 }
@@ -43,23 +43,23 @@ int wsep(char c)
 
 char *cap_string(char *aupstr)
 {
-	char *pup = s;
+	char *pup = aupstr;
 	int iseparator = 1;
 
-	while (*s)
+	while (*aupstr)
 	{
-		if (wsep(*s))
+		if (wsep(*aupstr))
 		{
 			iseparator = 1;
 		}
-		else if (islower(*s) && iseparator)
+		else if (islower(*aupstr) && iseparator)
 		{
-			*s = *s - 32;
+			*aupstr = *aupstr - 32;
 			iseparator = 0;
 		}
 		else
 			iseparator = 0;
-		s++;
+		aupstr++;
 	}
-	return (aupstr);
+	return (pup);
 }
