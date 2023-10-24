@@ -57,9 +57,9 @@ void ASCIIprint(char *b, int first, int last)
 	{
 		x = *(b + y + first);
 
-		if (ASCII(x))
+		if (!ASCII(x))
 			x = 46;
-		printf("%c", ch);
+		printf("%c", x);
 		y++;
 	}
 }
@@ -81,7 +81,7 @@ void print_buffer(char *b, int size)
 		for (first = 0; first < size; first += 10)
 		{
 			last = (size - first < 10) ? size - first : 10;
-			printf("%08x; ", first);
+			printf("%08x: ", first);
 			hex(b, first, last);
 			ASCIIprint(b, first, last);
 			printf("\n");
