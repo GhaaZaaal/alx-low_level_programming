@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
- * _strstr -
+ * _strstr - C func that locates a substring
  *
- * @haystack:
- * @needle:
+ * @haystack: the first string pointer
+ * @needle: the second string pointer
  *
- * Return:
+ * Return: pointer to the beginning of the located substring or null otherwise
 */
 
 char *_strstr(char *haystack, char *needle)
 {
-
+	
 }
