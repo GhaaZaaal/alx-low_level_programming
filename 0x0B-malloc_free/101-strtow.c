@@ -68,7 +68,7 @@ char **strtow(char *str)
 	if (w == 0)
 		return (NULL);
 
-	s = malloc(w + 1);
+	s = malloc(sizeof(char *) * (w + 1));
 	if (s == NULL)
 		return (NULL);
 
@@ -77,7 +77,7 @@ char **strtow(char *str)
 		while (str[i] == ' ')
 			i++;
 
-		l = words(str + i);
+		l = words(sizeof(char) * (l + 1));
 		s[x] = malloc(l + 1);
 
 		if (s[x] == NULL)
