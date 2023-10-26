@@ -36,7 +36,7 @@ int nwords(char *s)
 	for (i = 0; *(s + i); i++)
 		d++;
 
-	for (i = 0; i < d; index++)
+	for (i = 0; i < d; i++)
 	{
 		if (*(s + i) != ' ')
 		{
