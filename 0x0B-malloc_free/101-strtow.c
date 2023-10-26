@@ -59,7 +59,7 @@ int nwords(char *s)
 char **strtow(char *str)
 {
 	char **s;
-	int i = 0, w = 0, x, l, y;
+	int i = 0, w, x, l, y;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
