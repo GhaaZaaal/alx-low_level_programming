@@ -29,19 +29,21 @@ void putstr(char *str)
 
 int number(const char *s)
 {
-	int repositive = 1;
-	unsigned long int numb1, i, j;
+	int repositive = 1, j = 0;
+	unsigned long int n, i;
 
-	for (numb1 = 0; !(s[numb1] >= 48 && s[numb1] <= 57); numb1++)
+	for (n = 0; !(s[n] >= '0' && s[n] <= '9'); n++)
 	{
-		if (s[numb1] == '-')
+		if (s[n] == '-')
+		{
 			repositive *= -1;
+		}
 	}
 
-	for (i = numb1; s[i] >= 48 && s[i] <= 57; i++)
+	for (i = n; s[i] >= '0' && s[i] <= '9'; i++)
 	{
 		j *= 10;
-		j += (s[i] - 48);
+		j += (s[i] - '0');
 	}
 
 	return (repositive * j);
@@ -57,14 +59,14 @@ int number(const char *s)
 
 void pr_int(unsigned long int x)
 {
-	unsigned long int i, j, rechar = 1;
+	unsigned long int rechar = 1, i, j;
 
 	for (i = 0; x / rechar > 9; i++, rechar += 10)
-		;
+	;
 
 	for (; rechar >= 1; x %= rechar, rechar /= 10)
 	{
-		rechar = x / j;
+		j = x / rechar;
 		_putchar('0' + j);
 	}
 }
@@ -84,7 +86,7 @@ int main(int argc, char const *argv[])
 
 	if (argc != 3)
 	{
-		_putstr("Error ");
+		putstr("Error ");
 		exit(98);
 	}
 	pr_int(number(argv[1]) * number(argv[2]));
