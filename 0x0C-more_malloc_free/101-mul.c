@@ -61,7 +61,7 @@ void pr_int(unsigned long int x)
 {
 	unsigned long int rechar = 1, i, j;
 
-	for (i = 0; x / rechar > 9; i++, rechar += 10)
+	for (i = 0; x / rechar > 9; i++, rechar *= 10)
 	;
 
 	for (; rechar >= 1; x %= rechar, rechar /= 10)
