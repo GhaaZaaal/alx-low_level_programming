@@ -1,7 +1,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_numbers - C func that print numbers with separator in between
+ * print_strings - C func that print strings with separator in between
  *
  * @separator: the separator string used
  * @n: the number of arguments
@@ -10,7 +10,7 @@
  * Return: void
 */
 
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	int i = n;
 	char *s;
