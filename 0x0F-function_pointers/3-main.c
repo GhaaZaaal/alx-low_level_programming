@@ -11,21 +11,32 @@
 
 int main(int argc, char **argv)
 {
-	int (*op_func)(int, int), a, b;
+	int a, b;
+	char *op;
 
 	if (argc != 4)
-		printf("Error\n"), exit(98);
+	{
+		printf("Error\n");
+		exit(98);
+	}
 
 	a = atoi(argv[1]);
+	op = argv[2];
 	b = atoi(argv[3]);
 
-	op_func = get_op_func(argv[2]);
-	if (!op_func)
-		printf("Error\n"), exit(98);
+	if (get_op_func(op) == NULL || op[1] != '\0')
+	{
+		printf("Error\n");
+		exit(99);
+	}
 
-	if (!b && (argv[2][0] == '/' || argv[2][0] == '%'))
-		printf("Error\n"), exit(100);
+	if ((*op == '/' && b == 0) || (*op == '%' && b == 0))
+	{
+		printf("Error\n");
+		exit(100)
+	}
 
-	printf("%d\n", op_func(a, b));
+	printf("%d\n", get_op_func(op)(a, b));
+
 	return (0);
 }
