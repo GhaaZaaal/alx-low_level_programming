@@ -1,6 +1,13 @@
 #include "3-calc.h"
 
-/***/
+/**
+ * main - C prog 'calculator'
+ *
+ * @argc: the first argu
+ * @argv: the second argu
+ *
+ * Return: the answer
+*/
 
 int main(int argc, char **argv)
 {
