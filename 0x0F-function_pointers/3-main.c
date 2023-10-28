@@ -9,9 +9,8 @@
  * Return: the answer
 */
 
-int main(int argc, char **argv)
+int main(int __attribute__((__unused__)) argc, char *argv[])
 {
-	(void)argc;
 	int a, b;
 	char *op;
 
