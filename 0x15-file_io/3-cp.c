@@ -22,22 +22,22 @@ int main(int ec, char **ev)
 	char buf[READ_BUF_SIZE];
 
 	if (ec != 3)
-		dprintf(SIDERR_FILENO, USAGE), exit(97);
+		dprintf(STDERR_FILENO, USAGE), exit(97);
 
 	file1 = open(ev[1], O_RDONLY);
 	if (file1 == -1)
-		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
+		dprintf(STDERR_FILENO, ERR_NOREAD, ev[1]), exit(98);
 
-	file2 = open(av[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
+	file2 = open(ev[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
 	if (file2 == -1)
-		dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
+		dprintf(STDERR_FILENO, ERR_NOWRITE, ev[2]), exit(99);
 
 	while ((b = read(file1, buf, READ_BUF_SIZE)) > 0)
 		if (write(file2, buf, b) != b)
-			dprintf(STDERR_FILENO, ERR_NOWRITE, av[2]), exit(99);
+			dprintf(STDERR_FILENO, ERR_NOWRITE, ev[2]), exit(99);
 
 	if (b == -1)
-		dprintf(STDERR_FILENO, ERR_NOREAD, av[1]), exit(98);
+		dprintf(STDERR_FILENO, ERR_NOREAD, ev[1]), exit(98);
 
 	file1 = close(file1);
 	file2 = close(file2);
