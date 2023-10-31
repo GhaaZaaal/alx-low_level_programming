@@ -1,1 +1,1 @@
-the readme for my C repo
+the readme of the main project
