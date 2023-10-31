@@ -1,6 +1,13 @@
 #include "main.h"
 
-/***/
+/**
+ * read_textfile - C func that reads a text file and prints it to the posix
+ *
+ * @filename: pointer to the filename
+ * @letters: the file letters
+ *
+ * Return: b
+*/
 
 ssize_t read_textfile(const char *filename, size_t letters)
 {
