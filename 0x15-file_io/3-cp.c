@@ -24,7 +24,7 @@ int main(int ec, char **ev)
 	if (ec != 3)
 		dprintf(STDERR_FILENO, USAGE), exit(97);
 
-	form_fd = open(ev[1], O_RDONLY);
+	from_fd = open(ev[1], O_RDONLY);
 	if (form_fd == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, ev[1]), exit(98);
 
