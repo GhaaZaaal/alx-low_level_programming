@@ -8,4 +8,4 @@ main:
         call    printf
 
 section         .data
-        msg dp 'Hello, Holberton', 0xa, 0
+        msg: dp 'Hello, Holberton', 0xa
