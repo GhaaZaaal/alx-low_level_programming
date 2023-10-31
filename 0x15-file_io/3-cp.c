@@ -25,7 +25,7 @@ int main(int ec, char **ev)
 		dprintf(STDERR_FILENO, USAGE), exit(97);
 
 	from_fd = open(ev[1], O_RDONLY);
-	if (form_fd == -1)
+	if (from_fd == -1)
 		dprintf(STDERR_FILENO, ERR_NOREAD, ev[1]), exit(98);
 
 	to_fd = open(ev[2], O_WRONLY | O_CREAT | O_TRUNC, PERMISSIONS);
