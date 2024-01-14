@@ -1,1 +1,1 @@
-This is the README ready
+This is the README of my new alx low repo
