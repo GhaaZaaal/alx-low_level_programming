@@ -8,15 +8,19 @@
  */
 unsigned int binary_to_uint(const char *b)
 {
-	int i, bit = 1;
-	int len = strlen(b);
-	unsigned int converted = 0;
-	char *rev_str = malloc((len + 1) * sizeof(char));
 
-	if (rev_str == NULL)
+	int i;
+	int bit = 1;
+	int len = 0;
+	unsigned int converted = 0;
+	char *rev_str;
+
+	if (!b || *b == '\0')
 		return (0);
 
-	if (!b)
+	len = strlen(b);
+	rev_str = malloc((len + 1) * sizeof(char));
+	if (rev_str == NULL)
 		return (0);
 
 	rev_str[len] = '\0';
