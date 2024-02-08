@@ -11,7 +11,7 @@ void print_binary(unsigned long int n)
 
 	if (n == 0)
 	{
-		putchar('0');
+		_putchar('0');
 	}
 
 	while (to_count_bits != 0)
@@ -29,11 +29,11 @@ void print_binary(unsigned long int n)
 	{
 		if (n & max_bits)
 		{
-			putchar('1');
+			_putchar('1');
 		}
 		else
 		{
-			putchar('0');
+			_putchar('0');
 		}
 		max_bits >>= 1;
 	}
