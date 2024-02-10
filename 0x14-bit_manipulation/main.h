@@ -7,6 +7,17 @@
 /* to use the malloc and free*/
 #include <stdlib.h>
 
+/**
+ * union tester - union function to give the array
+ * @i: integer to put a value init and check for the endianness
+ * @c: the array consists on the sizeof int to check the location of i
+ */
+union tester
+{
+	int i;
+	char c[sizeof(int)];
+};
+
 int _putchar(char c);
 
 unsigned int binary_to_uint(const char *b);
