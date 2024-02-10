@@ -14,18 +14,13 @@ void print_binary(unsigned long int n)
 		to_count_bits >>= 1;
 		n_bits++;
 	}
-	for (i = 0; i < n_bits; i++)
+	for (i = 1; i < n_bits; i++)
 	{
-		if (i == 63)
-		{
-			max_bits = (max_bits * 2) - 1;
-			break;
-		}
 		max_bits *= 2;
 	}
 	if (n <= 0)
 	{
-		putchar('0');
+		_putchar('0');
 	}
 	else
 	{
@@ -33,11 +28,11 @@ void print_binary(unsigned long int n)
 		{
 			if (n & max_bits)
 			{
-				putchar('1');
+				_putchar('1');
 			}
 			else
 			{
-				putchar('0');
+				_putchar('0');
 			}
 			max_bits >>= 1;
 		}
