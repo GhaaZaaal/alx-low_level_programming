@@ -5,8 +5,10 @@
  */
 int get_endianness(void)
 {
+	union tester test;
+
 	test.i = 1;
-	if (test.c[0] == 0)
+	if (test.c[0] != 1)
 	{
 		return (0);
 	}
