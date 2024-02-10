@@ -15,7 +15,7 @@ int set_bit(unsigned long int *n, unsigned int index)
 	for (i = 0; i < index; i++)
 		max_at_index *= 2;
 
-	if ((*n | max_at_index) < 0 || index > 63)
+	if (index > 63)
 	{
 		return (-1);
 	}
